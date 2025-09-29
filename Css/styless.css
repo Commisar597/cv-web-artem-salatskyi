@@ -1,0 +1,218 @@
+body {
+    background-color: #000000; 
+}
+
+/*   Main page    */
+
+.grid-container-main-topic {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 10px 10px;
+}
+
+.grid-container-main-1 {
+   /* background-image: url(../images/purpleskinteture.png);
+    background-size: 300px 200px;*/
+    background-color: rgb(153, 70, 153);
+    grid-column: -1 / 1;
+    height: 180px;
+    border: 10px dashed rgb(120, 55, 120);
+    text-align: center;
+}
+
+.grid-container-main-2 {
+    background-color: rgb(197, 119, 197);
+    height: 480px;
+    border: 10px dashed rgb(169, 103, 169);
+    text-align: center;
+}
+
+.grid-container-main-3 {
+    background-color: rgb(227, 172, 227);
+    height: 480px;
+    border: 10px dashed rgb(181, 138, 181);
+    text-align: center;
+}
+
+/*   CV page    */
+
+.grid-container-CV-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 10px;
+}
+
+.grid-container-CV-group-1 {
+    background-color: rgb(153, 70, 153);
+    text-align: center;
+    border: 10px dashed rgb(122, 56, 122);
+    grid-row: -1 / 1;
+}
+
+.grid-container-CV-group-2 {
+    background-color: rgb(197, 119, 197);
+    text-align: center;
+    border: 10px dashed rgb(162, 99, 162);
+}
+
+.grid-container-CV-group-3 {
+    background-color: rgb(197, 119, 197);
+    text-align: center;
+    border: 10px dashed rgb(162, 99, 162);
+}
+
+/*   info    */
+
+.grid-container-CV-info-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 10px;
+}
+
+.grid-container-CV-info-group-1 {
+    background-color: rgb(227, 172, 227);
+    border: 10px dashed rgb(135, 82, 135);
+    text-align: center;
+}
+
+.grid-container-CV-info-group-2 {
+    background-color: rgb(227, 172, 227);
+    border: 10px dashed rgb(135, 82, 135);
+    text-align: center;
+}
+
+.grid-container-CV-info-group-3 {
+    background-color: rgb(227, 172, 227);
+    border: 10px dashed rgb(135, 82, 135);
+    text-align: center;
+}
+
+.grid-container-CV-info-group-4 {
+    background-color: rgb(227, 172, 227);
+    border: 10px dashed rgb(135, 82, 135);
+    text-align: center;
+}
+
+.grid-container-CV-info-group-5 {
+    background-color: rgb(171, 106, 171);
+    border: 10px dashed rgb(106, 64, 106);
+    text-align: center;
+}
+
+/*  about me page   */
+
+.grid-container-amp{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px 10px;
+}
+
+.grid-container-amp-topic{
+    background-color: rgb(227, 172, 227);
+    border: 10px dashed rgb(193, 145, 193);
+    text-align: center;
+    grid-column: -1 / 1;
+}
+
+.grid-container-amp-1{
+    background-color: rgb(227, 172, 227);
+    border: 10px dashed rgb(193, 145, 193);
+    text-align: center;
+}
+
+/*.grid-container-amp-1-photo{
+    background-image: ;
+    background-size: ;
+}*/
+
+.grid-container-amp-2{
+    background-color: rgb(227, 172, 227);
+    border: 10px dashed rgb(193, 145, 193);
+    text-align: center;
+}
+
+/*.grid-container-amp-2-photo{
+    background-image: ;
+    background-size: ;
+}*/
+
+.grid-container-amp-3{
+    background-color: rgb(227, 172, 227);
+    border: 10px dashed rgb(193, 145, 193);
+    text-align: center;
+}
+
+/*.grid-container-amp-3-photo{
+    background-image: ;
+    background-size: ;
+}*/
+
+
+/*  portfolio page   */
+
+.grid-container-pof{
+    display: grid;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.grid-container-pof-1{
+    background-color: rgb(153, 70, 153);
+    background-color: rgb(122, 56, 122);
+    text-align: center;
+}
+
+.grid-container-pof-2{
+    background-color: rgb(197, 119, 197);
+    background-color: rgb(164, 99, 164);
+    text-align: center;
+}
+
+
+/*    коробочка навигации    */
+
+
+.grid-navigation-main {
+    display: grid;
+    background-color: #222222;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px 10px;
+    /*border: 10px dashed rgb(132, 75, 132);*/
+}
+
+.grid-navigation-1{
+    height: 60px;
+    text-align: center;
+}
+
+.grid-navigation-2{
+    height: 60px; 
+    text-align: center;
+}
+
+.grid-navigation-3{
+    height: 60px; 
+    text-align: center;
+}
+
+
+/*    braek points    */
+
+
+@media (max-width: 1024px) {
+    .grid-container-second{
+        grid-template-columns: 2fr, 3fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container-second{
+        grid-template-columns: 1fr 2 fr;
+    }
+}
+
+@media (max-width: 375px) {
+    .grid-container-second{
+        grid-template-columns: 1fr;
+    }
+}
