@@ -29,12 +29,19 @@ h3 {
   padding: 10px;
 }
 
-.dif-colour1 {
+.text-highlitghted1 {
   color: var(--text-highlighted-color);
 }
 
-.dif-colour2 {
+.text-highlitghted2 {
   color: var(--text-highlighted2-color);
+}
+
+h4,
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
 /*  navigation  */
@@ -48,6 +55,7 @@ h3 {
 
 .header {
   width: 100%;
+  margin-bottom: 40px;
   background-color: var(--bg-container-color);
 }
 
@@ -81,31 +89,29 @@ h3 {
   justify-content: center;
 }
 
-.main-cont-1 {
+.main-cont-photo {
   grid-column: 1 / -1;
   display: grid;
   place-items: center;
-  /* центрируем и по X, и по Y */
   text-align: center;
-  /* чтобы текст тоже по центру */
 }
 
 .my-photo-ring img {
   width: 350px;
 }
 
-.main-cont-2 {
-  height: 301px;
+.main-cont-block {
   background-color: var(--bg-block-color);
   border-radius: 5%;
   text-align: center;
 }
 
-.main-cont-3 {
-  height: 301px;
-  background-color: var(--bg-block-color);
-  border-radius: 5%;
-  text-align: center;
+.about img {
+  width: 390px;
+}
+
+.portf img {
+  width: 390px;
 }
 
 /*     Cv      */
@@ -117,69 +123,30 @@ h3 {
   justify-content: center;
 }
 
-.block-1 {
+.block-tall {
   grid-row: span 2;
-  height: 446px;
   background-color: var(--bg-block-color);
   border-radius: 5%;
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
 }
 
 .my-photo img {
   width: 360px;
   border: 3px solid var(--text-secondary-color);
+  border-radius: 5%;
 }
 
-.block-2 {
-  height: 241px;
+.block {
+
   background-color: var(--bg-block-color);
   border-radius: 5%;
   text-align: center;
-}
-
-.block-3 {
-  height: 165px;
-  background-color: var(--bg-block-color);
-  border-radius: 5%;
-  text-align: center;
-}
-
-.block-4 {
-  grid-row: span 2;
-  height: 345px;
-  background-color: var(--bg-block-color);
-  border-radius: 5%;
-  text-align: center;
-}
-
-.block-5 {
-  height: 121px;
-  background-color: var(--bg-block-color);
-  border-radius: 5%;
-  text-align: center;
-}
-
-.block-6 {
-  height: 180px;
-  background-color: var(--bg-block-color);
-  border-radius: 5%;
-  text-align: center;
-}
-
-.block-7 {
-  height: 161px;
-  background-color: var(--bg-block-color);
-  border-radius: 5%;
-  text-align: center;
-}
-
-.block-8 {
-  height: 161px;
-  background-color: var(--bg-block-color);
-  border-radius: 5%;
-  text-align: center;
+  padding: 16px;
 }
 
 /*    About    */
@@ -345,50 +312,8 @@ h3 {
     gap: 16px;
   }
 
-  .block-1 {
-    grid-row: span 2;
-    height: 556px;
-    background-image: url(../images/block-tall768.svg);
-  }
-
   .my-photo img {
-    width: 330px;
-  }
-
-  .block-2 {
-    height: 270px;
-    background-image: url(../images/block768px.svg);
-  }
-
-  .block-3 {
-    height: 270px;
-    background-image: url(../images/block768px.svg);
-  }
-
-  .block-4 {
-    grid-row: span 2;
-    height: 556px;
-    background-image: url(../images/block-tall768.svg);
-  }
-
-  .block-5 {
-    height: 270px;
-    background-image: url(../images/block768px.svg);
-  }
-
-  .block-6 {
-    height: 270px;
-    background-image: url(../images/block768px.svg);
-  }
-
-  .block-7 {
-    height: 270px;
-    background-image: url(../images/block768px.svg);
-  }
-
-  .block-8 {
-    height: 270px;
-    background-image: url(../images/block768px.svg);
+    width: 310px;
   }
 
   .main {
@@ -400,16 +325,73 @@ h3 {
     width: 270px
   }
 
-  .main-cont-2 {
-    height: 270px;
-    background-image: url(../images/block768px.svg);
+  .about img {
+    width: 350px;
   }
 
-  .main-cont-3 {
-    height: 270px;
-    background-image: url(../images/block768px.svg);
+  .portf img {
+    width: 350px;
   }
 
+  .main-about {
+    display: grid;
+    grid-template-columns: repeat(1, 370px);
+    gap: 16;
+
+    .about-container {
+      height: 420px;
+      border-radius: 3%;
+    }
+
+    .about-text {
+      height: 402px;
+      width: 350px;
+      top: 10px;
+      left: 10px;
+    }
+
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(1, 600px);
+    display: grid;
+    gap: 28px;
+  }
+
+  .container1-text {
+    width: 250px;
+    height: 225px;
+    top: 75px;
+    left: 300px;
+  }
+
+  .container2 {
+    height: 280px;
+    border-radius: 2%;
+  }
+
+  .container2-text {
+    width: 250px;
+    height: 225px;
+    top: 75px;
+    left: 75px;
+  }
+
+  .container2-photo {
+    left: 335px;
+  }
+
+  .container3 {
+    height: 280px;
+    border-radius: 2%;
+  }
+
+  .container3-text {
+    width: 250px;
+    height: 225px;
+    top: 75px;
+    left: 300px;
+  }
 
 }
 
@@ -436,50 +418,8 @@ h3 {
     gap: 16px;
   }
 
-  .block-1 {
-    grid-row: span 2;
-    height: 556px;
-    background-image: url(../images/block-tall368.svg);
-  }
-
   .my-photo img {
-    width: 300px;
-  }
-
-  .block-2 {
-    height: 270px;
-    background-image: url(../images/block368px.svg);
-  }
-
-  .block-3 {
-    height: 270px;
-    background-image: url(../images/block368px.svg);
-  }
-
-  .block-4 {
-    grid-row: span 2;
-    height: 556px;
-    background-image: url(../images/block-tall368.svg);
-  }
-
-  .block-5 {
-    height: 270px;
-    background-image: url(../images/block368px.svg);
-  }
-
-  .block-6 {
-    height: 270px;
-    background-image: url(../images/block768px.svg);
-  }
-
-  .block-7 {
-    height: 270px;
-    background-image: url(../images/block368px.svg);
-  }
-
-  .block-8 {
-    height: 270px;
-    background-image: url(../images/block368px.svg);
+    width: 280px;
   }
 
   .main {
@@ -491,14 +431,90 @@ h3 {
     width: 250px;
   }
 
-  .main-cont-2 {
-    height: 270px;
-    background-image: url(../images/block368px.svg);
+  .about img {
+    width: 300px;
   }
 
-  .main-cont-3 {
-    height: 270px;
-    background-image: url(../images/block368px.svg);
+  .portf img {
+    width: 300px;
+  }
+
+  .main-about {
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    gap: 16;
+
+    .about-container {
+      height: 520px;
+      border-radius: 3%;
+    }
+
+    .about-text {
+      height: 302px;
+      width: 280px;
+      top: 10px;
+      left: 10px;
+    }
+
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(1, 300px);
+    gap: 44px;
+  }
+
+  .container1 {
+    height: 280px;
+  }
+
+  .container1-photo {
+    width: 150px;
+    height: 150px;
+    top: 25px;
+    left: 25px;
+  }
+
+  .container1-text {
+    width: 325px;
+    height: 225px;
+    top: 75px;
+    left: 375px;
+  }
+
+  .container2 {
+    height: 280px;
+  }
+
+  .container2-text {
+    width: 325px;
+    height: 225px;
+    top: 75px;
+    left: 100px;
+  }
+
+  .container2-photo {
+    width: 225px;
+    height: 225px;
+    top: 25px;
+    left: 535px;
+  }
+
+  .container3 {
+    height: 280px;
+  }
+
+  .container3-photo {
+    width: 225px;
+    height: 225px;
+    top: 25px;
+    left: 25px;
+  }
+
+  .container3-text {
+    width: 325px;
+    height: 225px;
+    top: 85px;
+    left: 375px;
   }
 
 }
