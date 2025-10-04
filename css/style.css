@@ -184,76 +184,37 @@ h3 {
   justify-content: center;
 }
 
-.container1 {
-  height: 280px;
+.portfolio-card {
   background-color: var(--bg-block-color);
+  display: flex;
+  align-items: center;
   border-radius: 2%;
-  position: relative;
+  padding: 20px;
+  gap: 75px;
 }
 
-.container1-photo {
+.portfolio-card-reversed {
+  flex-direction: row-reverse;
+  /*реверсирует флекс, изменяя порядок в строке в обраном порядке*/
+}
+
+.portfolio-card-photo {
   width: 225px;
   height: 225px;
-  position: absolute;
-  top: 25px;
-  left: 25px;
   border: 3px solid var(--text-secondary-color);
+  flex-shrink: 0;
+  /*выносит текст за пределы конкуренции из флекс "гонки", перенося нагрузки на другие обекты*/
 }
 
-.container1-text {
-  width: 325px;
-  height: 225px;
-  position: absolute;
-  top: 75px;
-  left: 375px;
+.portfolio-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*Предает фото опредёленную форму*/
 }
 
-.container2 {
-  height: 280px;
-  background-color: var(--bg-block-color);
-  border-radius: 2%;
-  position: relative;
-}
-
-.container2-text {
-  width: 325px;
-  height: 225px;
-  position: absolute;
-  top: 75px;
-  left: 100px;
-}
-
-.container2-photo {
-  width: 225px;
-  height: 225px;
-  position: absolute;
-  top: 25px;
-  left: 535px;
-  border: 3px solid var(--text-secondary-color);
-}
-
-.container3 {
-  height: 280px;
-  background-color: var(--bg-block-color);
-  border-radius: 2%;
-  position: relative;
-}
-
-.container3-photo {
-  width: 225px;
-  height: 225px;
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  border: 3px solid var(--text-secondary-color);
-}
-
-.container3-text {
-  width: 325px;
-  height: 225px;
-  position: absolute;
-  top: 85px;
-  left: 375px;
+.portfolio-card-text {
+  font-style: var(--text-font);
 }
 
 /*    braek points    */
@@ -285,6 +246,10 @@ h3 {
   .main {
     grid-template-columns: repeat(2, 390px);
     gap: 28px;
+  }
+
+  .portfolio-card-text {
+    font-size: 90%;
   }
 
 }
@@ -325,72 +290,62 @@ h3 {
     width: 270px
   }
 
-  .about img {
-    width: 350px;
-  }
-
-  .portf img {
+  .reclama img {
     width: 350px;
   }
 
   .main-about {
     display: grid;
     grid-template-columns: repeat(1, 370px);
-    gap: 16;
+    gap: 16px;
+  }
 
-    .about-container {
-      height: 420px;
-      border-radius: 3%;
-    }
+  .about-container {
+    height: 420px;
+    border-radius: 3%;
+  }
 
-    .about-text {
-      height: 402px;
-      width: 350px;
-      top: 10px;
-      left: 10px;
-    }
-
+  .about-text {
+    height: 402px;
+    width: 350px;
+    top: 10px;
+    left: 10px;
   }
 
   .portfolio-container {
-    grid-template-columns: repeat(1, 600px);
+    grid-template-columns: repeat(1, 500px);
     display: grid;
     gap: 28px;
   }
 
-  .container1-text {
-    width: 250px;
-    height: 225px;
-    top: 75px;
-    left: 300px;
-  }
-
-  .container2 {
-    height: 280px;
+  .portfolio-card {
+    background-color: var(--bg-block-color);
+    display: flex;
+    align-items: center;
     border-radius: 2%;
+    padding: 20px;
+    gap: 35px;
   }
 
-  .container2-text {
-    width: 250px;
+  .portfolio-card-reversed {
+    flex-direction: row-reverse;
+  }
+
+  .portfolio-card-photo {
+    width: 225px;
     height: 225px;
-    top: 75px;
-    left: 75px;
+    border: 3px solid var(--text-secondary-color);
+    flex-shrink: 0;
   }
 
-  .container2-photo {
-    left: 335px;
+  .portfolio-card-photo img {
+    width: 220px;
+    height: 220px;
   }
 
-  .container3 {
-    height: 280px;
-    border-radius: 2%;
-  }
-
-  .container3-text {
-    width: 250px;
-    height: 225px;
-    top: 75px;
-    left: 300px;
+  .portfolio-card-text {
+    font-style: var(--text-font);
+    font-size: 80%;
   }
 
 }
@@ -431,11 +386,7 @@ h3 {
     width: 250px;
   }
 
-  .about img {
-    width: 300px;
-  }
-
-  .portf img {
+  .reclama img {
     width: 300px;
   }
 
@@ -443,19 +394,18 @@ h3 {
     display: grid;
     grid-template-columns: repeat(1, 300px);
     gap: 16;
+  }
 
-    .about-container {
-      height: 520px;
-      border-radius: 3%;
-    }
+  .about-container {
+    height: 520px;
+    border-radius: 3%;
+  }
 
-    .about-text {
-      height: 302px;
-      width: 280px;
-      top: 10px;
-      left: 10px;
-    }
-
+  .about-text {
+    height: 302px;
+    width: 280px;
+    top: 10px;
+    left: 10px;
   }
 
   .portfolio-container {
@@ -463,58 +413,34 @@ h3 {
     gap: 44px;
   }
 
-  .container1 {
-    height: 280px;
+  .portfolio-card {
+    background-color: var(--bg-block-color);
+    display: flex;
+    align-items: center;
+    border-radius: 2%;
+    padding: 20px;
+    gap: 15px;
   }
 
-  .container1-photo {
+  .portfolio-card-reversed {
+    flex-direction: row-reverse;
+  }
+
+  .portfolio-card-photo {
     width: 150px;
     height: 150px;
-    top: 25px;
-    left: 25px;
+    border: 3px solid var(--text-secondary-color);
+    flex-shrink: 0;
   }
 
-  .container1-text {
-    width: 325px;
-    height: 225px;
-    top: 75px;
-    left: 375px;
+  .portfolio-card-photo img {
+    width: 145px;
+    height: 145px;
   }
 
-  .container2 {
-    height: 280px;
-  }
-
-  .container2-text {
-    width: 325px;
-    height: 225px;
-    top: 75px;
-    left: 100px;
-  }
-
-  .container2-photo {
-    width: 225px;
-    height: 225px;
-    top: 25px;
-    left: 535px;
-  }
-
-  .container3 {
-    height: 280px;
-  }
-
-  .container3-photo {
-    width: 225px;
-    height: 225px;
-    top: 25px;
-    left: 25px;
-  }
-
-  .container3-text {
-    width: 325px;
-    height: 225px;
-    top: 85px;
-    left: 375px;
+  .portfolio-card-text {
+    font-style: var(--text-font);
+    font-size: 70%;
   }
 
 }
