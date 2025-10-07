@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*подключаем шрифт*/
 :root {
   /* глобальные переменные */
   --bg-layout-color: #161513;
@@ -149,32 +151,29 @@ h3 {
 
 .main-about {
   display: grid;
-  grid-template-columns: repeat(1, 780px);
   gap: 44px;
   justify-content: center;
-
 }
 
 .about-container {
   background-color: var(--bg-block-color);
   border-radius: 3%;
-  position: relative;
+  padding: 0 16px;
 }
 
 .about-text {
-  width: 680px;
-  margin: 20px auto; 
+  width: 100%;
   text-align: left;
   line-height: 1.6; 
+  gap: 44px;
 }
 
 /*    Portfolio    */
 
 .portfolio-container {
-  display: grid;
-  grid-template-columns: repeat(1, 780px);
+  display: flex;
+  flex-direction: column;
   gap: 44px;
-  justify-content: center;
 }
 
 .portfolio-card {
@@ -192,8 +191,7 @@ h3 {
 }
 
 .portfolio-card-photo {
-  width: 225px;
-  height: 225px;
+  width: 30%;
   border: 3px solid var(--text-secondary-color);
   flex-shrink: 0;
   /*выносит текст за пределы конкуренции из флекс "гонки", перенося нагрузки на другие обекты*/
@@ -288,8 +286,6 @@ h3 {
   }
 
   .main-about {
-    display: grid;
-    grid-template-columns: repeat(1, 370px);
     gap: 16px;
   }
 
@@ -297,14 +293,9 @@ h3 {
     border-radius: 3%;
   }
 
-  .about-text {
-    width: 350px;
-  }
-
   .portfolio-container {
-    grid-template-columns: repeat(1, 500px);
-    display: grid;
     gap: 28px;
+    padding: 0 24px;
   }
 
   .portfolio-card {
@@ -318,18 +309,6 @@ h3 {
 
   .portfolio-card-reversed {
     flex-direction: row-reverse;
-  }
-
-  .portfolio-card-photo {
-    width: 225px;
-    height: 225px;
-    border: 3px solid var(--text-secondary-color);
-    flex-shrink: 0;
-  }
-
-  .portfolio-card-photo img {
-    width: 220px;
-    height: 220px;
   }
 
   .portfolio-card-text {
@@ -380,8 +359,6 @@ h3 {
   }
 
   .main-about {
-    display: grid;
-    grid-template-columns: repeat(1, 300px);
     gap: 16px;
   }
 
@@ -389,13 +366,8 @@ h3 {
     border-radius: 3%;
   }
 
-  .about-text {
-    width: 280px;
-  }
-
   .portfolio-container {
-    grid-template-columns: repeat(1, 300px);
-    gap: 44px;
+    gap: 18px;
   }
 
   .portfolio-card {
@@ -409,18 +381,6 @@ h3 {
 
   .portfolio-card-reversed {
     flex-direction: row-reverse;
-  }
-
-  .portfolio-card-photo {
-    width: 150px;
-    height: 150px;
-    border: 3px solid var(--text-secondary-color);
-    flex-shrink: 0;
-  }
-
-  .portfolio-card-photo img {
-    width: 145px;
-    height: 145px;
   }
 
   .portfolio-card-text {
